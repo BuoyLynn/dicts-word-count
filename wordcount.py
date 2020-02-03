@@ -10,6 +10,16 @@ def read_file(file):
         words = lines.split(' ')
         all_words.extend(words)
 
+    print(all_words)
+    for words in all_words:
+        for letter in words:
+            if letter in [',', '.', '!', '?', ':', ';']:
+                print(words)
+                words = words[0:-1]
+                print(words)
+
+    print(all_words)
+
 
     word_count = {}
     for word in all_words:
@@ -17,3 +27,4 @@ def read_file(file):
 
     for word, count in word_count.items():
         print(f"{word} {count}") 
+
